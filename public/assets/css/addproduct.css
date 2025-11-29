@@ -1,0 +1,108 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container h1{
+    font-weight: bold;
+}
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: #4e73df;
+    margin-bottom: 30px;
+}
+
+.card {
+    border: 1px solid #e3e6f0;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.card .section-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #4e73df;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    color: #495057;
+    margin-bottom: 8px;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ced4da;
+    margin-bottom: 10px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="file"] {
+    padding: 10px;
+}
+
+select {
+    appearance: none;
+    cursor: pointer;
+}
+
+/* Submit Button */
+.btn-primary {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    padding: 15px;
+    background-color: #4e73df;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: auto;
+    /* Set width to auto to prevent the 40% width */
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background-color: #375a7f;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .col-md-8,
+    .col-md-4 {
+        width: 100%;
+    }
+}

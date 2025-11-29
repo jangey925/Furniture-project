@@ -1,0 +1,352 @@
+/* Reset basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+
+.flex-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Main content should grow to fill available space */
+.flex-grow {
+    flex: 1;
+}
+/* Navbar styling */
+.navbar {
+    background-color: #e9eef3;
+    padding: 0.9rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+ 
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1500px;
+    margin-right: 8px;
+}
+
+.navbar-brand img {
+    height: 50px;
+    border-radius: 45%;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 0.5rem ;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+    color: #d4c2a8;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    margin-left: 80px;
+    position: relative;
+}
+
+.search-input {
+    width: 250px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+.search-button {
+    position: absolute;
+    right: 0;
+    padding: 10px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-button i {
+    color: white;
+    font-size: 18px;
+}
+
+.search-button:hover {
+    background-color: #45a049;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #4CAF50;
+
+}
+.cart-icon {
+    margin-left: 28px;
+    color: #333;
+    font-size: 1.5em;
+    text-decoration: none;
+    position: relative;
+     display: inline-block;
+}
+.cart-badge {
+    position: absolute;
+    top: -6px;
+    right: -10px;
+    background-color: orange;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 50%;
+    min-width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+.cart-icon i{
+    font-size: 24px;
+    color: gray;
+
+}
+
+.cart-icon:hover {
+    color: #000;
+}
+
+
+.navbar-right {
+    display: flex;
+    justify-content: end;
+    margin-left: 80px;
+    gap: 10px;
+}
+
+/* Style for the Signup button */
+.navbar-right .signup-link {
+    background-color: #d4c2a8;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+.navbar-right .signup-link:hover {
+    text-decoration: underline;
+}
+
+/* Style for the Login button */
+.navbar-right a.login-link {
+    margin-left: 10px;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.navbar-right a.login-link:hover {
+    background-color: #d4c2a8;
+    text-decoration: underline;
+}
+.profile-dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.profile-circle,
+.profile-initials {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #d4c2a8;
+}
+
+
+.image img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+.image .profile-initials {
+    width: 50px;
+    height: 50px;
+    background-color: #d4c2a8;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    width: 150px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 1000;
+}
+
+.profile-dropdown:hover .dropdown-menu {
+    visibility: visible;
+    opacity: 1;
+}
+
+.dropdown-item {
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    transition: background 0.3s;
+}
+
+
+.dropdown-item:hover {
+    background-color: #f1f1f1;
+    color: #bbac97;
+}
+
+.dropdown profile-dropdown img{
+    object-fit: cover;
+}
+
+
+.content {
+    width: 100%;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* footer */
+.footer {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.footer-section h4 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    color: #aaa;
+    text-decoration: none;
+}
+
+.footer-social a {
+    margin: 0 10px;
+    color: #fff;
+    font-size: 1.5em;
+}
+
+.footer-social a i {
+    color: #aaa;
+}
+
+.footer-social a:hover i {
+    color: #fff;
+}
+
+.phone-icon::before,
+.email-icon::before,
+.facebook-icon::before,
+.x-icon::before,
+.instagram-icon::before {
+    content: ' ';
+    margin-right: 5px;
+}
+
+.footer-copyright {
+    color: #666;
+    margin-top: 20px;
+}
